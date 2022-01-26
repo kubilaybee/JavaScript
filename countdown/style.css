@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./test.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Space Mono', monospace";
+  margin: 0;
+  font-style: italic bold;
+  color: gray;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 4rem;
+  margin-top: 40rem;
+}
+
+.countdown-container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.big-text {
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 1rem 2rem;
+}
+
+.countdown-el {
+  text-align: center;
+}
+
+.countdown-el span {
+  font-size: 1.3rem;
+}
