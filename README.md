@@ -13,3 +13,7 @@
 
 ![weatherProject1](https://user-images.githubusercontent.com/76490534/151186363-d9008741-ca11-410c-8c04-8a2af386da60.png)
 ![weatherProject2](https://user-images.githubusercontent.com/76490534/151186366-10c19714-e968-47ff-aba7-214c7b338bd7.png)
+
+## Pokedex Project
+![pokedex2](https://user-images.githubusercontent.com/76490534/151266229-3b703f4c-7368-4aa4-aab5-f0de828cc66b.png)
+![pokedex1](https://user-images.githubusercontent.com/76490534/151266232-865b0a9e-6220-414c-a6ef-0bb878ba97e9.png)
