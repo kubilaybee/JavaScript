@@ -10,7 +10,7 @@ function countDown() {
   const newYearsDate = new Date(newYears);
   const currentDate = new Date();
 
-  // allSecs
+  // allSeconds
   const tempData = (newYearsDate - currentDate) / 1000;
 
   //The Math. floor() function returns the largest integer less than or equal to a given number.
