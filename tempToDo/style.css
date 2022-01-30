@@ -3,13 +3,11 @@ body {
   width: 50%;
   margin: 0 auto;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: darkslateblue;
-  color: beige;
+  background-color: darkgrey;
 }
 
 .container {
-  width: 100%;
-  display: flex;
+  width: 1000%;
 }
 
 #inputField {
@@ -19,7 +17,6 @@ body {
   outline: none;
   font-size: 25px;
   vertical-align: middle;
-  justify-content: space-around;
 }
 
 #addToDo {
