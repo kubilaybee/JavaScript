@@ -6,3 +6,5 @@ http
     response.end("Merhaba");
   })
   .listen(8080);
+
+log.information("Sunucu Yayına geçti");
