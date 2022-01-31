@@ -10,6 +10,7 @@ app.get("/admin", function (request, response) {
 app.get("/product", function (request, response) {
   console.log("ID: " + request.query.id);
   console.log("Category ID: " + request.query.categoryid);
+
   response.send("Hello Product");
 });
 
