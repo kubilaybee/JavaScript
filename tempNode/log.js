@@ -1,6 +1,3 @@
-const { Console } = require("console");
-var log = require("./log.js");
-
 var log = {
   information: function (info) {
     console.log("Information: " + info);
@@ -9,3 +6,5 @@ var log = {
     console.log("Fault: " + fault);
   },
 };
+
+//module.exports = log;
