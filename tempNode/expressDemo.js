@@ -1,5 +1,9 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
+
+// extended true olursa json gibi bir data dönüşü sağlanır
+var urlEncodedParser = bodyParser.urlencoded({ extended: false });
 
 app.get("/", function (request, response) {
   response.send("Hello");
@@ -7,6 +11,7 @@ app.get("/", function (request, response) {
 app.get("/admin", function (request, response) {
   response.send("Hello Admin");
 });
+
 app.get("/product", function (request, response) {
   console.log("ID: " + request.query.id);
   console.log("Category ID: " + request.query.categoryid);
@@ -14,7 +19,8 @@ app.get("/product", function (request, response) {
   response.send("Hello Product");
 });
 
-app.post("/product", function (request, response) {
+app.post("/product", urlEncodedParser, function (request, response) {
+  console.log(request.body.name);
   response.send("Post request accepted !!");
 });
 
