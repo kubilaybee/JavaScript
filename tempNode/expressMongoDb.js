@@ -57,13 +57,11 @@ Customer.findById("61f8aa5c75b6f2935015031f", (error, data) => {
     throw error;
   }
   console.log(data);
-  data.city = "Istanbul";
-  console.log(data);
 
-  data.save((error) => {
+  data.remove((error) => {
     if (error) {
       throw error;
     }
-    console.log("Customer updated");
+    console.log("Customer deleted");
   });
 });
