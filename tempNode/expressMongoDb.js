@@ -12,8 +12,8 @@ mongoose.connect(
 );
 
 // var customer1 = new Customer({
-//   name: "Ezekiel",
-//   city: "Town",
+//   name: "Barry",
+//   city: "City",
 // });
 
 // customer1.save((error) => {
@@ -23,3 +23,29 @@ mongoose.connect(
 
 //   console.log("Customer saved !");
 // });
+
+// datas to list {}
+// filter the data with { name: "Tony" }
+// Customer.find({ name: "Tony" }, (error, data) => {
+//   if (error) {
+//     throw error;
+//   }
+//   console.log(data);
+// });
+
+// Customer.findById("61f8aa5c75b6f2935015031f", (error, data) => {
+//   if (error) {
+//     throw error;
+//   }
+//   console.log(data);
+// });
+
+Customer.find({}, (error, data) => {
+  if (error) {
+    throw error;
+  }
+  console.log(data);
+})
+  .where("city")
+  .equals("Town") // eşleşme or gt=greaterThan komutu büyük lt() küçük lte küçük eşit
+  .limit(1); // insiyatif
