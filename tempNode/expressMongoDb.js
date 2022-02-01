@@ -52,16 +52,39 @@ mongoose.connect(
 //   .sort("name") // sıralama funct -name tersten sıralama sağlar
 //   .select("name city"); // sadece dönecek datalar
 
-Customer.findById("61f8aa5c75b6f2935015031f", (error, data) => {
-  if (error) {
-    throw error;
-  }
-  console.log(data);
+// Customer.findById("61f8aa5c75b6f2935015031f", (error, data) => {
+//   if (error) {
+//     throw error;
+//   }
+//   console.log(data);
 
-  data.remove((error) => {
-    if (error) {
-      throw error;
-    }
-    console.log("Customer deleted");
-  });
-});
+//   data.remove((error) => {
+//     if (error) {
+//       throw error;
+//     }
+//     console.log("Customer deleted");
+//   });
+// });
+
+// update data
+// Customer.findOneAndUpdate(
+//   { name: "Meow2" },
+//   { name: "Meow" },
+//   (error, data) => {
+//     if (error) {
+//       throw error;
+//     }
+//     console.log(data);
+//   }
+// );
+// update vers -2
+// Customer.findByIdAndUpdate(
+//   "61f8aaf363020465cb6a85c0",
+//   { city: "Tony" },
+//   (error, data) => {
+//     if (error) {
+//       throw error;
+//     }
+//     console.log(data);
+//   }
+// );
