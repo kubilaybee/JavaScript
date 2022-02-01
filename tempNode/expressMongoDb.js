@@ -48,4 +48,6 @@ Customer.find({}, (error, data) => {
 })
   .where("city")
   .equals("Town") // eşleşme or gt=greaterThan komutu büyük lt() küçük lte küçük eşit
-  .limit(1); // insiyatif
+  .limit(2) // dönecek data sayısı
+  .sort("name") // sıralama funct -name tersten sıralama sağlar
+  .select("name city"); // sadece dönecek datalar
