@@ -40,14 +40,30 @@ mongoose.connect(
 //   console.log(data);
 // });
 
-Customer.find({}, (error, data) => {
+// Customer.find({}, (error, data) => {
+//   if (error) {
+//     throw error;
+//   }
+//   console.log(data);
+// })
+//   .where("city")
+//   .equals("Town") // eşleşme or gt=greaterThan komutu büyük lt() küçük lte küçük eşit
+//   .limit(2) // dönecek data sayısı
+//   .sort("name") // sıralama funct -name tersten sıralama sağlar
+//   .select("name city"); // sadece dönecek datalar
+
+Customer.findById("61f8aa5c75b6f2935015031f", (error, data) => {
   if (error) {
     throw error;
   }
   console.log(data);
-})
-  .where("city")
-  .equals("Town") // eşleşme or gt=greaterThan komutu büyük lt() küçük lte küçük eşit
-  .limit(2) // dönecek data sayısı
-  .sort("name") // sıralama funct -name tersten sıralama sağlar
-  .select("name city"); // sadece dönecek datalar
+  data.city = "Istanbul";
+  console.log(data);
+
+  data.save((error) => {
+    if (error) {
+      throw error;
+    }
+    console.log("Customer updated");
+  });
+});
