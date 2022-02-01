@@ -3,8 +3,8 @@ var Schema = mongoose.Schema;
 
 // schema
 var customerSchema = new Schema({
-  name: string,
-  city: string,
+  name: String,
+  city: String,
 });
 
 var Customer = mongoose.model("Customer", customerSchema);
