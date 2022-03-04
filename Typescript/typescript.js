@@ -2,6 +2,21 @@
 // let b: number;
 // let c: boolean;
 // let d: any; //dinamik
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // a = "Hello World";
 // b = 22;
 // c = true;
@@ -127,3 +142,45 @@
 // // mongodb.update();
 // addDatabase(mysql);
 // addDatabase(mongodb);
+var Database = /** @class */ (function () {
+    function Database() {
+    }
+    Database.prototype.get = function () {
+        console.log("Database get");
+    };
+    Database.prototype.add = function () {
+        console.log("Database get");
+    };
+    return Database;
+}());
+var MySql = /** @class */ (function (_super) {
+    __extends(MySql, _super);
+    function MySql() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MySql.prototype["delete"] = function () {
+        console.log("MySql delete");
+    };
+    MySql.prototype.update = function () {
+        console.log("MySql update");
+    };
+    return MySql;
+}(Database));
+var MongoDB = /** @class */ (function (_super) {
+    __extends(MongoDB, _super);
+    function MongoDB() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MongoDB.prototype["delete"] = function () {
+        console.log("MongoDB delete");
+    };
+    MongoDB.prototype.update = function () {
+        console.log("MongoDB update");
+    };
+    return MongoDB;
+}(Database));
+function addDatabase(database) {
+    database["delete"]();
+}
+addDatabase(new MySql());
+addDatabase(new MongoDB());

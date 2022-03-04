@@ -149,3 +149,38 @@
 
 // addDatabase(mysql);
 // addDatabase(mongodb);
+
+abstract class Database {
+  get() {
+    console.log("Database get");
+  }
+  add() {
+    console.log("Database get");
+  }
+  abstract delete();
+  abstract update();
+}
+
+class MySql extends Database {
+  delete() {
+    console.log("MySql delete");
+  }
+  update() {
+    console.log("MySql update");
+  }
+}
+class MongoDB extends Database {
+  delete() {
+    console.log("MongoDB delete");
+  }
+  update() {
+    console.log("MongoDB update");
+  }
+}
+
+function addDatabase(database: Database) {
+  database.delete();
+}
+
+addDatabase(new MySql());
+addDatabase(new MongoDB());
