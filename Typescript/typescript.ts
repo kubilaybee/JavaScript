@@ -97,3 +97,55 @@
 // employee1.showInfos();
 
 // interface
+interface IDatabase {
+  add();
+  get();
+  delete();
+  update();
+}
+class MySql implements IDatabase {
+  add() {
+    console.log("MySql add");
+  }
+  get() {
+    console.log("MySql get");
+  }
+  delete() {
+    console.log("MySql delete");
+  }
+  update() {
+    console.log("MySql update");
+  }
+}
+class MongoDB implements IDatabase {
+  add() {
+    console.log("MongoDB add");
+  }
+  get() {
+    console.log("MongoDB get");
+  }
+  delete() {
+    console.log("MongoDB delete");
+  }
+  update() {
+    console.log("MongoDB update");
+  }
+}
+function addDatabase(database: IDatabase) {
+  database.add();
+}
+
+let mysql = new MySql();
+// mysql.add();
+// mysql.get();
+// mysql.delete();
+// mysql.update();
+
+let mongodb = new MongoDB();
+// mongodb.add();
+// mongodb.get();
+// mongodb.delete();
+// mongodb.update();
+
+addDatabase(mysql);
+addDatabase(mongodb);
