@@ -43,3 +43,38 @@
 //   return;
 // }
 // addNumber(10, 20);
+// class
+// class Person {
+//   name: string;
+//   age: number;
+//   private phone: string;
+//   constructor(name: string, age: number, phone: string) {
+//     this.name = name;
+//     this.age = age;
+//     this.phone = phone;
+//     console.log("Kişi Oluşturuldu");
+//   }
+//   showInfos() {
+//     console.log(`İsim: ${this.name} Yaş: ${this.age} Tel: ${this.phone}`);
+//   }
+// }
+// class Employee extends Person {
+//   salary: number;
+//   constructor(name: string, age: number, phone: string, salary: number) {
+//     super(name, age, phone);
+//     this.salary = salary;
+//   }
+//   // overriding
+//   showInfos(): void {
+//     super.showInfos();
+//     console.log(`Maaş: ${this.salary}`);
+//   }
+//   changeDepartent() {
+//     console.log("Departman Değiştiriliyor..");
+//   }
+// }
+// let person1 = new Person("Kubilay", 28, "1234567890");
+// person1.showInfos();
+// let employee1 = new Employee("Ekrem", 34, "1231231221", 2000);
+// employee1.showInfos();
+// interface
