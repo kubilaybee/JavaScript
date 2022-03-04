@@ -24,3 +24,31 @@
 // console.log(...boolValues);
 // console.log(...a);
 // functions
+// function addNumber(num1: number, num2: number) {
+//   console.log(num1 + num2);
+// }
+
+// addNumber(10, 20);
+// optional variable of function
+// function addNumber(num1: number, num2?: number): number {
+//   if (typeof num2 === "undefined") {
+//     return num1;
+//   }
+//   return num1 + num2;
+// }
+
+// console.log(addNumber(10));
+// default variable
+// function addNumber(num1: number, num2: number = 100): number {
+//   return num1 + num2;
+// }
+
+// console.log(addNumber(10));
+// console.log(addNumber(10, 20));
+
+// function addNumber(num1: number, num2: number): void {
+//   console.log(num1 + num2);
+//   return;
+// }
+
+// addNumber(10, 20);
